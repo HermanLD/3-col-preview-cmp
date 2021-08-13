@@ -1,0 +1,136 @@
+:root {
+  --clr-primary-1: hsl(31, 77%, 52%);
+  --clr-primary-2: hsl(184, 100%, 22%);
+  --clr-primary-3: hsl(179, 100%, 13%);
+  /* paragraphs */
+  --clr-neutral-1: hsla(0, 0%, 100%, 0.75);
+  /* background, headings, buttons */
+  --clr-neutral-2: hsl(0, 0%, 95%);
+
+  --ff-body: "Lexend Deca", sans-serif;
+  --ff-heading: "Big Shoulders Display", cursive;
+
+  --fw-reg: 400;
+  --fw-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  /* 1 rem = 10px */
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 8.6rem 2.4rem;
+  font-size: 1.5rem;
+  font-family: var(--ff-body);
+  font-weight: var(--fw-reg);
+  text-rendering: optimizeSpeed;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-bold);
+}
+
+ul,
+ul > li {
+  list-style: none;
+  margin: none;
+}
+
+button,
+button:hover,
+button:focus {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/** ---- */
+/** PREVIEW CARDS */
+
+.preview-cards {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  border-radius: 10px;
+  max-width: 92rem;
+  overflow: hidden;
+}
+
+.preview-cards > .sedan-card {
+  background-color: var(--clr-primary-1);
+}
+.sedan-card > .cta {
+  color: var(--clr-primary-1);
+}
+
+.preview-cards > .suvs-card {
+  background-color: var(--clr-primary-2);
+}
+.suvs-card > .cta {
+  color: var(--clr-primary-2);
+}
+
+.preview-cards > .luxury-card {
+  background-color: var(--clr-primary-3);
+}
+.luxury-card > .cta {
+  color: var(--clr-primary-3);
+}
+
+.preview-cards-option {
+  padding: 4.8rem;
+  color: var(--clr-neutral-1);
+}
+
+.preview-cards-option > .icon {
+  margin-bottom: 3.6rem;
+}
+
+.preview-cards-option > .header {
+  margin-bottom: 3.6rem;
+  color: var(--clr-neutral-2);
+  font-size: 4.2rem;
+}
+
+.preview-cards-option > .content {
+  line-height: 1.7;
+  margin-bottom: 2.4rem;
+}
+
+.preview-cards-option > .cta {
+  border-radius: 100px;
+  border: 2px solid var(--clr-neutral-2);
+  padding: 1.6rem 3rem;
+  background-color: var(--clr-neutral-2);
+  letter-spacing: 1px;
+}
+
+.preview-cards-option > .cta:hover,
+.preview-cards-option > .cta:focus {
+  background-color: transparent;
+  color: var(--clr-neutral-2);
+}
+
+@media (min-width: 800px) {
+  .preview-cards {
+    flex-direction: row;
+  }
+  .preview-cards-option > .content {
+    margin-bottom: 8.4rem;
+  }
+}
